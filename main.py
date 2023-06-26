@@ -4,13 +4,13 @@ from random import randint
 def attack(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный '
-                '{5 + randint(3, 5)}')
+                f'{5 + randint(3, 5)}')
     if char_class == 'mage':
         return (f'{char_name} нанёс урон противнику равный '
-                '{5 + randint(5, 10)}')
+                f'{5 + randint(5, 10)}')
     if char_class == 'healer':
         return (f'{char_name} нанёс урон противнику равный '
-                '{5 + randint(-3, -1)}')
+                f'{5 + randint(-3, -1)}')
     return (f'{char_name} не атаковал противника')
 
 
@@ -27,7 +27,7 @@ def defence(char_name, char_class):
 def special(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение «Выносливость '
-                '{80 + 25}»')
+                f'{80 + 25}»')
     if char_class == 'mage':
         return (f'{char_name} применил специальное умение «Атака {5 + 40}»')
     if char_class == 'healer':
@@ -86,7 +86,7 @@ def main():
     print('Прежде чем начать игру...')
     char_name = input('...назови себя: ')
     print(f'Здравствуй, {char_name}! '
-          'Сейчас твоя выносливость — 80, атака — 5 и защита — 10.')
+          f'Сейчас твоя выносливость — 80, атака — 5 и защита — 10.')
     print('Ты можешь выбрать один из трёх путей силы:')
     print('Воитель, Маг, Лекарь')
     char_class = choice_char_class()
